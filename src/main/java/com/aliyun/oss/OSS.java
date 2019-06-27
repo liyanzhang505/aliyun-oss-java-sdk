@@ -3077,6 +3077,57 @@ public interface OSS {
     public GenericResult processObject(ProcessObjectRequest processObjectRequest) throws OSSException, ClientException;
 
     /**
+     * Sets the request payment of the {@link Bucket}.
+     * 
+     * @param bucketName
+     *             The bucket name.
+     * @param payer
+     *             The request payer setting
+     * @throws OSSException
+     *             OSS Server side exception.
+     * @throws ClientException
+     *             OSS Client side exception.
+     */
+    public void setBucketRequestPayment(String bucketName, Payer payer) throws OSSException, ClientException;
+
+    /**
+     * Sets the request payment of the {@link Bucket}.
+     * 
+     * @param setBucketRequestPaymentRequest
+     * 			   A {@link SetBucketRequestPaymentRequest} instance  that has 
+     * 			   the bucket name and payer setting.
+     * @throws OSSException
+     *             OSS Server side exception.
+     * @throws ClientException
+     *             OSS Client side exception.
+     */
+    public void setBucketRequestPayment(SetBucketRequestPaymentRequest setBucketRequestPaymentRequest) throws OSSException, ClientException;
+
+    /**
+     * Gets the request payment of the {@link Bucket}.
+     * 
+     * @param bucketName
+     *             The bucket name.
+     * @throws OSSException
+     *             OSS Server side exception.
+     * @throws ClientException
+     *             OSS Client side exception.
+     */
+    public GetBucketRequestPaymentResult getBucketRequestPayment(String bucketName) throws OSSException, ClientException;
+
+    /**
+     * Gets the request payment of the {@link Bucket}.
+     * 
+     * @param genericRequest
+     *             {@link GenericRequest} instance that has the bucket name.
+     * @throws OSSException
+     *             OSS Server side exception.
+     * @throws ClientException
+     *             OSS Client side exception.
+     */
+    public GetBucketRequestPaymentResult getBucketRequestPayment(GenericRequest genericRequest) throws OSSException, ClientException;
+
+    /**
      * Creates UDF
      * 
      * @param createUdfRequest

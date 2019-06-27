@@ -1413,6 +1413,26 @@ public class OSSClient implements OSS {
     }
 
     @Override
+    public void setBucketRequestPayment(String bucketName, Payer payer) throws OSSException, ClientException {
+    	this.bucketOperation.setBucketRequestPayment(new SetBucketRequestPaymentRequest(bucketName, payer));
+    }
+    
+    @Override
+    public void setBucketRequestPayment(SetBucketRequestPaymentRequest setBucketRequestPaymentRequest) throws OSSException, ClientException{
+    	this.bucketOperation.setBucketRequestPayment(setBucketRequestPaymentRequest);
+    }
+    
+    @Override
+    public GetBucketRequestPaymentResult getBucketRequestPayment(String bucketName) throws OSSException, ClientException{
+    	return this.bucketOperation.getBucketRequestPayment(new GenericRequest(bucketName));
+    }
+    
+    @Override
+    public GetBucketRequestPaymentResult getBucketRequestPayment(GenericRequest genericRequest) throws OSSException, ClientException{
+    	return this.bucketOperation.getBucketRequestPayment(genericRequest);
+    }
+
+    @Override
     public void createUdf(CreateUdfRequest createUdfRequest) throws OSSException, ClientException {
         this.udfOperation.createUdf(createUdfRequest);
     }
