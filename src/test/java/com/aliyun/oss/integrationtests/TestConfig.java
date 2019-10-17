@@ -59,4 +59,8 @@ public final class TestConfig {
     // OSS encryption client kms test multi region cmk.
     public static String OSS_TEST_REGION2 = null;
     public static String OSS_TEST_REGION2_CMK = null;
+
+    // OSS Inventory test configuration
+    public static String OSS_TEST_INVENTORY_BUCKET_DESTINATION_ACCOUNT = null;
+    public static String OSS_TEST_INVENTORY_BUCKET_DESTINATION_ARN = null;
 }

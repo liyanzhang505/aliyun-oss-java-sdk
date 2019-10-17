@@ -458,6 +458,17 @@ public class TestBase {
         if (TestConfig.OSS_TEST_REGION2_CMK == null) {
             TestConfig.OSS_TEST_REGION2_CMK = System.getenv().get("OSS_TEST_REGION2_CMK");
         }
+
+        if (TestConfig.OSS_TEST_INVENTORY_BUCKET_DESTINATION_ACCOUNT == null) {
+            TestConfig.OSS_TEST_INVENTORY_BUCKET_DESTINATION_ACCOUNT = System.getenv()
+                    .get("OSS_TEST_INVENTORY_BUCKET_DESTINATION_ACCOUNT");
+        }
+
+        if (TestConfig.OSS_TEST_INVENTORY_BUCKET_DESTINATION_ARN == null) {
+            TestConfig.OSS_TEST_INVENTORY_BUCKET_DESTINATION_ARN = System.getenv()
+                    .get("OSS_TEST_INVENTORY_BUCKET_DESTINATION_ARN");
+        }
+
     }
 
 }
